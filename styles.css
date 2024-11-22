@@ -218,6 +218,7 @@ body {
   background: linear-gradient(120deg, #d9bbff 0%, #ffe9a6 100%);
   cursor: pointer;
   font-family: 'Major Mono Display', monospace;
+  color: black;
 }
 
 @keyframes fadeIn {
