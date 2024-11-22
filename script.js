@@ -59,23 +59,31 @@ let touchStartX = 0;
 let touchStartY = 0;
 let touchInitialized = false;
 
-document.addEventListener('touchmove', (e) => {
+document.addEventListener('touchstart', (e) => {
     if (!isAutoRotating) {
-        if (!touchInitialized) {
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-            touchInitialized = true;
-        } else {
-            const deltaX = e.touches[0].clientX - touchStartX;
-            const deltaY = e.touches[0].clientY - touchStartY;
-            rotationY += deltaX * 0.5;
-            rotationX -= deltaY * 0.5;
-            updateCubeRotation();
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-        }
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchInitialized = true;
     }
 });
+
+document.addEventListener('touchmove', (e) => {
+    e.preventDefault(); // This ensures smooth touch control
+    if (!isAutoRotating && touchInitialized) {
+        const deltaX = e.touches[0].clientX - touchStartX;
+        const deltaY = e.touches[0].clientY - touchStartY;
+        rotationY += deltaX * 0.5;
+        rotationX -= deltaY * 0.5;
+        updateCubeRotation();
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+    }
+}, { passive: false });
+
+document.addEventListener('touchend', () => {
+    touchInitialized = false;
+});
+
 
 document.addEventListener('keydown', (e) => {
     if (!isAutoRotating) {
