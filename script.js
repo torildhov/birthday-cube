@@ -11,15 +11,15 @@ const welcomeMessage = document.querySelector('.welcome-message');
 
 if (isMobile) {
     welcomeMessage.innerHTML = `
-        <p>✨ click to pause Rotation</p>
-        <p>👆 touch and dRaG to Rotate</p>
+        <p>🌻 click to pause Rotation</p>
+        <p>🐞 touch and dRaG to Rotate</p>
         <button class="close-btn">Got it!</button>
     `;
 } else {
     welcomeMessage.innerHTML = `
-        <p>✨ click to pause Rotation</p>
-        <p>🔄 Move Mouse to Rotate</p>
-        <p>⬅️ use aRRow keys to Rotate</p>
+        <p>🐢 click to pause Rotation</p>
+        <p>🍭 Move Mouse to Rotate</p>
+        <p>🌊 use aRRow keys to Rotate</p>
         <button class="close-btn">Got it!</button>
     `;
 }
