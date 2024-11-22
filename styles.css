@@ -54,7 +54,7 @@ body {
   transform: translateZ(150px);
   display: flex;
   flex-direction: column;
-  background: url('/birthday-cube/assets/dddepth-321.jpg') center/cover;
+  background: url('./assets/dddepth-316.jpg') center/cover;
   overflow: hidden;
   padding: 0;
 }
@@ -76,27 +76,27 @@ body {
 
 .face.back {
   transform: translateZ(-150px) rotateY(180deg);
-  background: url('/birthday-cube/assets/dddepth-316.jpg') center/cover;
+  background: url('./assets/dddepth-317.jpg') center/cover;
 }
 
 .face.right {
   transform: translateX(150px) rotateY(90deg);
-  background: url('/birthday-cube/assets/dddepth-317.jpg') center/cover;
+  background: url('./assets/dddepth-318.jpg') center/cover;
 }
 
 .face.left {
   transform: translateX(-150px) rotateY(-90deg);
-  background: url('/birthday-cube/assets/dddepth-318.jpg') center/cover;
+  background: url('./assets/dddepth-319.jpg') center/cover;
 }
 
 .face.top {
   transform: translateY(-150px) rotateX(90deg);
-  background: url('/birthday-cube/assets/dddepth-319.jpg') center/cover;
+  background: url('./assets/dddepth-320.jpg') center/cover;
 }
 
 .face.bottom {
   transform: translateY(150px) rotateX(-90deg);
-  background: url('/birthday-cube/assets/dddepth-320.jpg') center/cover;
+  background: url('./assets/dddepth-321.jpg') center/cover;
 }
 
 .line {
