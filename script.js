@@ -5,6 +5,26 @@ let rotationY = 0;
 let rotationSpeed = 0.3; 
 let animationFrameId;
 
+// Add this at the start of your script
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const welcomeMessage = document.querySelector('.welcome-message');
+
+if (isMobile) {
+    welcomeMessage.innerHTML = `
+        <p>✨ click to pause Rotation</p>
+        <p>👆 touch and dRaG to Rotate</p>
+        <button class="close-btn">Got it!</button>
+    `;
+} else {
+    welcomeMessage.innerHTML = `
+        <p>✨ click to pause Rotation</p>
+        <p>🔄 Move Mouse to Rotate</p>
+        <p>⬅️ use aRRow keys to Rotate</p>
+        <button class="close-btn">Got it!</button>
+    `;
+}
+
+
 
 autoRotate();
 
@@ -106,4 +126,8 @@ document.addEventListener('keydown', (e) => {
 
         updateCubeRotation();
     }
+});
+
+document.querySelector('.close-btn').addEventListener('click', () => {
+    document.querySelector('.welcome-message').style.display = 'none';
 });
