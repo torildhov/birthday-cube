@@ -5,7 +5,7 @@ let rotationY = 0;
 let rotationSpeed = 0.3; 
 let animationFrameId;
 
-// Add this at the start of your script
+
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const welcomeMessage = document.querySelector('.welcome-message');
 
@@ -88,7 +88,7 @@ document.addEventListener('touchstart', (e) => {
 });
 
 document.addEventListener('touchmove', (e) => {
-    e.preventDefault(); // This ensures smooth touch control
+    e.preventDefault(); 
     if (!isAutoRotating && touchInitialized) {
         const deltaX = e.touches[0].clientX - touchStartX;
         const deltaY = e.touches[0].clientY - touchStartY;
