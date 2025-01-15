@@ -1,6 +1,7 @@
 # Birthday Cube 🎁
+![Birthday Cube Preview](assets/birthday-cube.png)
 
-A simple interactive 3D cube display with personalized birthday messages that rotates and  responds to user input. Happy birthday Viktor! 🎉
+A simple interactive 3D cube display with personalized birthday messages that rotates and  responds to user input. Happy 3D birthday Viktor! 🎉
 
 ## Features ✨
 
