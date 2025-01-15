@@ -34,7 +34,7 @@ A simple interactive 3D cube display with personalized birthday messages that ro
 
 1. Clone the repository:
 ```
-git clone https://github.com/yourusername/birthday-cube.git
+git clone https://github.com/torildhov/birthday-cube.git
 ```
 
 2. Navigate to project directory:
